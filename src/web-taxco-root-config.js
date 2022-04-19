@@ -6,8 +6,6 @@ import {
 } from "single-spa-layout";
 
 import { ReplaySubject } from "rxjs";
-import { sharedData$, getData } from "@web-taxco/spa-shared-state";
-
 // registerApplication({
 //   name: "@single-spa/welcome",
 //   app: () =>
@@ -41,18 +39,6 @@ registerApplication({
   customProps: {
     authTokenSubject
   }
-}); */
-
-getData().subscribe((sharedData) => {
-  // console.log("sharedata root config", sharedData);
-});
-
-/* authTokenSubject.next("asfd789sd8f97")
-
-authTokenSubject.subscribe(data => {
-  debugger
-  console.log('inside authTokenSubject', data)
-  authTokenSubject.data = data;
 }); */
 
 const routes = constructRoutes(document.querySelector("#single-spa-layout"));
