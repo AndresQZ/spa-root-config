@@ -50,10 +50,10 @@
     {
       "imports": {
         "@web-taxco/root-config": "//localhost:9000/web-taxco-root-config.js",
-        "@web-taxco/spa-admin": "//localhost:8080/web-taxco-spa-admin.js",
-        "@web-taxco/spa-shop":"//localhost:4200/main.js",
-        "@web-taxco/spa-route": "http://localhost:8081/js/app.js",
-        "@web-taxco/spa-shared-state": "http://localhost:8500/web-taxco-spa-shared-state.js"
+        "@web-taxco/spa-admin": "//localhost:8082/web-taxco-spa-admin.js",
+        "@web-taxco/spa-shared-state": "http://localhost:8500/web-taxco-spa-shared-state.js",
+        "@web-taxco/administration": "http://localhost:8081/web-taxco-administration.js",
+        "@web-taxco/shop": "//localhost:4200/main.js"
       }
     }
   </script>
@@ -77,15 +77,15 @@
 
   <template id="single-spa-layout">
     <single-spa-router>
-      <nav class="topnav">
+      <!-- <nav class="topnav">
         <application name="@web-taxco/spa-route"></application>
-      </nav>
+      </nav> -->
       <div class="main-content">
-        <route path="admin">
-          <application name="@web-taxco/spa-admin"></application>
+        <route path="administracion">
+          <application name="@web-taxco/administration"></application>
         </route>
-        <route path="shop">
-          <application name="@web-taxco/spa-shop"></application>
+        <route path="mq">
+          <application name="@web-taxco/shop"></application>
         </route>
       </div>
     </single-spa-router>
